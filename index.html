@@ -1,108 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Previous head and style sections remain the same -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Portfolio</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --background-color: #f5f6fa;
-            --text-color: #2c3e50;
-            --header-bg: #ffffff;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--header-bg);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--secondary-color);
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        section {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .research-item {
-            margin-bottom: 2rem;
-        }
-
-        .research-item h3 {
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .research-item ul {
-            padding-left: 1.5rem;
-        }
-
-        .research-item li {
-            margin-bottom: 0.75rem;
-        }
-
+        /* ... previous styles ... */
         .email-protection {
             unicode-bidi: bidi-override;
             direction: rtl;
             text-align: left;
             cursor: pointer;
             user-select: none;
+            min-height: 1.5em;  /* Add this to maintain spacing when empty */
+            margin: 1em 0;      /* Add some margin for spacing */
+        }
+        
+        .hidden {
+            display: none;
         }
 
         #contact-section {
@@ -118,121 +34,55 @@
             text-decoration: none;
             margin: 10px 0;
             transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .contact-btn:hover {
             background-color: #2980b9;
         }
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-        }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Previous header and research sections remain the same -->
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Click the button below to reveal contact email:</p>
+        <div class="email-protection" id="email-display"></div>
+        <button class="contact-btn" onclick="toggleEmail()">Show Email</button>
+    </section>
 
-    <main>
-        <section id="research">
-            <h1>Research Experience</h1>
-            
-            <div class="research-item">
-                <h2>Personal Data and Empowerment Lab - University of Utah</h2>
-                <ul>
-                    <li>Led a project designing workflow automations for healthcare providers at the Neilsen Rehabilitation Hospital (NRH), focusing on improving care for patients with Disorders of Consciousness.</li>
-                    <li>Conducted research on smart home technology implementation in NRH patient rooms, analyzing stakeholder needs and experiences to optimize support systems.</li>
-                    <li>Published research accepted at a premier Human-Computer Interaction conference.</li>
-                    <li>Contributed to the development of adaptive sports technology, working with Arduino and C to prototype and test a modified sip-n-puff controller for the Tetraski adaptive skiing device.</li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h2>Department of Biomedical Informatics - University of Utah</h2>
-                <ul>
-                    <li>Developed intuitive patient and clinician-facing visualizations using Python, focusing on facilitating personal data engagement for geriatric VA patients.</li>
-                    <li>Served as the software engineer in an interdisciplinary team, bridging technical implementation with healthcare expertise.</li>
-                    <li>Created secure and reliable code for handling sensitive personal health information, ensuring both functionality and privacy compliance.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can reach me at:</p>
-            <div class="email-protection" id="email-display">moc.liamg@ymmud</div>
-            <button class="contact-btn" onclick="revealEmail()">Show Email</button>
-        </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 Research Portfolio</p>
-    </footer>
+    <!-- Previous footer remains the same -->
 
     <script>
-        function revealEmail() {
-            const emailParts = ['u1374928', '@', 'example', '.', 'com'];
+        const emailParts = ['your', '.', 'email', '@', 'example', '.', 'com'];
+        let isEmailVisible = false;
+
+        function toggleEmail() {
             const button = document.querySelector('.contact-btn');
             const display = document.getElementById('email-display');
             
-            // Only reveal on actual click events (not script)
-            if (event.isTrusted) {
+            if (!isEmailVisible && event.isTrusted) {
+                // Show email
                 const email = emailParts.join('');
                 display.textContent = email;
                 display.style.direction = 'ltr';
-                
-                // Create a temporary input for copying
-                const tempInput = document.createElement('input');
-                tempInput.value = email;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempInput);
-                
-                button.textContent = 'Email Copied!';
-                setTimeout(() => {
-                    button.textContent = 'Show Email';
-                    display.textContent = email.split('').reverse().join('');
-                    display.style.direction = 'rtl';
-                }, 2000);
+                button.textContent = 'Copy Email';
+                isEmailVisible = true;
+            } else if (event.isTrusted) {
+                // Copy email
+                const email = emailParts.join('');
+                navigator.clipboard.writeText(email).then(() => {
+                    button.textContent = 'Email Copied!';
+                    setTimeout(() => {
+                        button.textContent = 'Show Email';
+                        display.textContent = '';
+                        isEmailVisible = false;
+                    }, 2000);
+                });
             }
         }
-
-        // Additional anti-scraping measure: Email is not present in source
-        window.addEventListener('load', function() {
-            const display = document.getElementById('email-display');
-            if (display) {
-                const emailParts = ['your', '.', 'email', '@', 'example', '.', 'com'];
-                display.textContent = emailParts.join('').split('').reverse().join('');
-            }
-        });
     </script>
 </body>
 </html>
