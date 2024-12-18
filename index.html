@@ -97,6 +97,33 @@
             margin-bottom: 0.75rem;
         }
 
+        .email-protection {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: left;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #contact-section {
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #2980b9;
+        }
+
         footer {
             background-color: var(--primary-color);
             color: white;
@@ -155,10 +182,57 @@
                 </ul>
             </div>
         </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can reach me at:</p>
+            <div class="email-protection" id="email-display">moc.liamg@ymmud</div>
+            <button class="contact-btn" onclick="revealEmail()">Show Email</button>
+        </div>
+        </section>
     </main>
 
     <footer>
         <p>© 2024 Research Portfolio</p>
     </footer>
+
+    <script>
+        function revealEmail() {
+            const emailParts = ['your', '.', 'email', '@', 'example', '.', 'com'];
+            const button = document.querySelector('.contact-btn');
+            const display = document.getElementById('email-display');
+            
+            // Only reveal on actual click events (not script)
+            if (event.isTrusted) {
+                const email = emailParts.join('');
+                display.textContent = email;
+                display.style.direction = 'ltr';
+                
+                // Create a temporary input for copying
+                const tempInput = document.createElement('input');
+                tempInput.value = email;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                
+                button.textContent = 'Email Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Show Email';
+                    display.textContent = email.split('').reverse().join('');
+                    display.style.direction = 'rtl';
+                }, 2000);
+            }
+        }
+
+        // Additional anti-scraping measure: Email is not present in source
+        window.addEventListener('load', function() {
+            const display = document.getElementById('email-display');
+            if (display) {
+                const emailParts = ['your', '.', 'email', '@', 'example', '.', 'com'];
+                display.textContent = emailParts.join('').split('').reverse().join('');
+            }
+        });
+    </script>
 </body>
 </html>
