@@ -1,4 +1,34 @@
-[Previous HTML content exactly the same until the projects section]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Keep all your original styling -->
+    <style>
+        /* Your original CSS remains exactly the same */
+    </style>
+</head>
+<body>
+    <!-- Keep header and navigation exactly the same -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Research Portfolio</h1>
+
+        <!-- Keep all research section content exactly the same -->
+        <section id="research">
+            <!-- Your original research content -->
+        </section>
 
         <section id="projects">
             <h2>Projects</h2>
@@ -26,4 +56,48 @@
             </div>
         </section>
 
-[Rest of the HTML content exactly the same]
+        <!-- Keep contact section exactly the same -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Click the button below to reveal contact email:</p>
+            <div class="email-protection" id="email-display"></div>
+            <button class="contact-btn" onclick="toggleEmail()">Show Email</button>
+        </section>
+    </main>
+
+    <!-- Keep footer exactly the same -->
+    <footer>
+        <p>&copy; 2024 Research Portfolio</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Built with Claude using the multi context protocol</p>
+    </footer>
+
+    <!-- Keep JavaScript exactly the same -->
+    <script>
+        const emailParts = ['u1374928', '@', 'utah', '.', 'edu'];
+        let isEmailVisible = false;
+
+        function toggleEmail() {
+            const button = document.querySelector('.contact-btn');
+            const display = document.getElementById('email-display');
+            
+            if (!isEmailVisible && event.isTrusted) {
+                const email = emailParts.join('');
+                display.textContent = email;
+                display.style.direction = 'ltr';
+                button.textContent = 'Copy Email';
+                isEmailVisible = true;
+            } else if (event.isTrusted) {
+                const email = emailParts.join('');
+                navigator.clipboard.writeText(email).then(() => {
+                    button.textContent = 'Email Copied!';
+                    setTimeout(() => {
+                        button.textContent = 'Show Email';
+                        display.textContent = '';
+                        isEmailVisible = false;
+                    }, 2000);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
