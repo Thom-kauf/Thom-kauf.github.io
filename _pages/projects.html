@@ -1,0 +1,14 @@
+---
+layout: archive
+title: "Projects"
+permalink: /projects/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p><em>These are some projects that fall into a few different categories: in progress, small experiments, or class projects that are interesting enough to share.</em></p>
+
+{% for post in site.projects reversed %}
+  {% include archive-single.html %}
+{% endfor %}
