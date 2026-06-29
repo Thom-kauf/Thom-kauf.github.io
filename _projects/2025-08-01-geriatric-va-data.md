@@ -8,12 +8,10 @@ date: "2025-08-01"
 github: "https://github.com/Thom-kauf/Data-Exploration-Visualization/tree/main/Baseline"
 ---
 
-Served as the Software Engineer and Data Analyst within an interdisciplinary team at the University of Utah, focused on facilitating personal health data engagement for geriatric VA patients.
+Served as the Software Engineer and Data Analyst within an interdisciplinary team at the University of Utah, focused on facilitating personal health data engagement for geriatric VA patients. This work was done in the Department of Biomedical Informatics at The University of Utah.
 
 **Key Contributions:**
 * **Iterative Design:** Dynamically developed intuitive patient and clinician-facing visualizations in Python based on real-time feedback during data engagement interviews.
-* **Rapid Prototyping:** At the request of participants, made real-time modifications to the code to reflect user preferences for visualization structures.
-* **Data Engineering:** Developed robust Python code to process and interact with large, sensitive datasets of health information.
-* **Qualitative Analysis:** Conducted qualitative coding and analysis on interview data to extract design requirements for elderly patient populations.
+* **Qualitative Analysis:** Conducted qualitative coding and analysis on interview data to develop design considerations for future systems.
 
 The project highlights the intersection of health informatics and human-centered design, ensuring that complex medical data remains accessible and actionable for geriatric populations.
