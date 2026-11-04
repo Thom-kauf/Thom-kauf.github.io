@@ -9,4 +9,4 @@ paperurl: 'https://dl.acm.org/doi/full/10.1145/3772318.3791533'
 citation: 'Thomas Kauffman, Rebecca Moore, and Jason Wiese. 2026. Opportunities For Technology to Facilitate Treatment for People with Disorders of Consciousness. In Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI ’26). Association for Computing Machinery, New York, NY, USA'
 ---
 
-Recently accepted for CHI 2026 (Below is a preprint). This work explores how technology can better support treatment pathways for patients with disorders of consciousness.
+Accepted at CHI 2026. This work explores how technology can better support treatment pathways for patients with disorders of consciousness.

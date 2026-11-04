@@ -7,11 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a Masters Student studying Artificial Intelligence and doing human-centered computing and Mechanistic Interpretability research to try and figure out how we can design technology that helps people. Healthcare is a particularly rich area for this type of work, and I have been very lucky to learn this first hand by working on interesting problems with interesting people in the Personal Data and Empowerment Lab under [Professor Jason Wiese](https://pedel.cs.utah.edu/).
+I am a Masters Student studying Artificial Intelligence. I enjoy thinking about and working on building AI systems that help people. Right now, I'm particularly interested in building and evaluating AI systems that enhance people's capabilities in decision making and efficiency while combatting the long-term negative side effects of this like skill and dignity degradation. 
 
-My research interests can be boiled down to a central question: "How can we build AI systems that help people accomplish tasks and answer questions in a way that empowers them to do what they think is right, how they think it should be done?" I believe that Mechanistic Interpretability and Human-Computer Interaction are equal parts crucial in the process of building such systems.  
-
-I am also a co-founder of [Scattershot AI](https://scattershot-ai.github.io/webpage/)-A multi-agent LLM framework that automates the pipeline of hypothesis generation, testing, and exploitation of Insecure Direct Object Reference vulnerabilities in web applications-where I am currently exploring the design of multi-agent-human interactions in this safety-critical domain.
+I'm currently working on benchmarking and interpreting LLMs for Nephrologist-facing diagnostic support tooling in the (Ananas research group)[https://www.anamarasovic.com/mentoring/]. I am also actively building [Scattershot AI](https://scattershot-ai.github.io/webpage/)-A multi-agent system that augments the penetration testing workflow. At scattershot, I am currently designing multi-agent-human interactions in this safety-critical domain and building agents. Previously, I worked with healthcare providers and patients in a smart rehabilitation hospital to develop design considerations to improve the technology to better suport people's needs in the (PeDEL lab)[https://pedel.cs.utah.edu/].  
 
 ## News
 * **[March 2026]** I’m heading to Barcelona, Spain 🇪🇸 to present our paper, "[Opportunities For Technology to Facilitate Treatment for People with Disorders of Consciousness](/publication/2026-chi-doc)" at CHI '26! My first first-author paper. 
